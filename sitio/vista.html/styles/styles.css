@@ -1,0 +1,44 @@
+/*-----------------------LOGIN-----------------*/
+body{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 600px;
+    margin-right: 500px;
+    margin-top: 80px;
+    font-size:25px;
+    color: #633B09;
+    background-image: url("/sitio/fondo.jpg");
+}
+#login{
+    text-align: left;
+}
+input{
+    border-radius: 5px ;
+    padding: 8px;
+    border: solid rgb(92, 52, 1) 2px;
+    color: rgb(134, 58, 4);
+}
+#btnlogin{
+    background-color: #442A0B;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    color: cornsilk;
+    font-size: 25px;
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+#btnlogin:hover{
+    background-color: #3f270a;
+    color: rgb(233, 233, 233);
+    border: solid 2px rgba(133, 120, 0, 0.753);
+    
+}
+h2{
+    margin-right: 80px;
+}
+label{
+    font-weight: bold;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sitio/vista.html/styles/main.css" type="text/css">
+    <title>The Music Feeling</title>
+</head>
+<body>
+    <div class="salir">
+        <button id="cerrarsesion" class="cerrar">Cerrar sesion</button>
+    </div>
+    <h1>¡Bienvenido a The Music Fest!</h1>
+    <h2 class="description"><i>--Los mejores conciertos alrededor del mundo--</i></h2>
+    <!--Crear concierto-->
+    <div id="token">
+    </div>
+    <h2>-CONCIERTOS-</h2>
+    <div class="conciertosDisponibles">
+        <h3>-->Ver conciertos disponibles</h3>
+        <button type="button" id="conciertos" class="ver">Ver</button>
+        <button type="button" id="hideInfo" class="hidelist">Ocultar</button>
+        <div id="verConciertos" class="verConciertos"></div>
+    </div>
+
+    </div>
+    
+    
+    <div class="climaConcierto">
+        <h3>-->Clima de la ciudad del concierto </h3>
+        <button type="button" id="cargarciudad" class="cargar">Cargar</button>
+        <select  id="selectciudad" class="select"></select>
+        <button type="button" id="ocultarapi" class="ocultarclima">Ocultar</button>
+        <div id="infoapi"></div>
+    </div>
+
+    <div class="buscarConcierto">
+        <h3>--> Buscar concierto y ver bandas participantes</h3>
+        <button id="refrescarCon" class="cargar">Refrescar conciertos</button>
+        <select id="idCon" class="select"></select>
+        <button type="button" id="btnocultar" class="ocultarclima">Ocultar</button>
+        <div id="resBusqueda"></div>
+    </div>
+    <!------------------------------------------------------------------------------------->
+    <!-----------------------------------CRUD USUARIOS------------------------------------->
+    <!------------------------------------------------------------------------------------->
+    <h2>-USUARIOS-</h2>
+    <div class="verUsuarios">
+        <h3>Ver usuarios</h3>
+        <button type="button" id="btnlistusers" class="ver">Ver</button>
+        <button type="button" id="ocultarusers" class="ocultarusuarios">Ocultar</button>
+        <div id="verusers"></div>
+    </div>
+    
+
+    
+    <div class="addusuario">
+        <h3>Agregar user</h3>
+        <form method="POST" action="http://localhost:1338/themusicfeeling/users/" class="formadd">
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Ingresa un usuario" required>
+            <p></p>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="password" required> 
+            <p></p>
+            <label for="tipo">Tipo: </label>
+            <input type="text" name="tipo" id="tipo" value="user" readonly>
+            <p></p>
+            <label for="celular">Celular: </label>
+            <input type="text" name="celular" id="celular" placeholder="Ingresa celular" required>
+            <p></p>
+            <button type="button" id="adduser" class="add">Agregar</button>
+            <button type="reset" class="reset">Reset</button>
+        </form>
+        
+        
+    </div>
+    
+    <div class="actualizaruser">
+        <h3>Actualizar user</h3>
+        <form class="formput">
+            <p>Id: <select id="updateselect" class="select"></select> <button type="button" id="cargarupdate" class="cargar">Cargar</button></p>
+            <p></p>
+            <label for="upusuario">Usuario:</label>
+            <input type="text" name="usuario" id="upusuario" placeholder="Ingresa un usuario" required>
+            <p></p>
+            <label for="uppassword">Password: </label>
+            <input type="password" name="password" id="uppassword" placeholder="password" required>
+            <p></p>
+            <label for="uptipo">Tipo: </label>
+            <input type="text" name="tipo" id="uptipo" value="user" readonly>
+            <p></p>
+            <label for="upcelular">Celular</label>
+            <input type="text" name="celular" id="upcelular" placeholder="Ingresa celular" required>
+            <p></p>
+            <button type="button" id="btnactualizar" class="actualizar">Actualizar</button>
+            <button type="reset" class="reset">Reset</button>
+        </form>
+        
+    </div>
+    <!--ELIMINAR USER-->
+    <div class="deleteuser">
+        <h3>Eliminar user</h3>
+        <button id="cargarusers" class="cargar">Cargar</button>
+        <select name="" id="deleteselect" class="select"></select>
+        <button type="button" id="btndelete" class="delete">Eliminar</button>
+    </div>
+
+    <!--Agregar entrada a un usuario-->
+    <div class="entradas">
+        <h3>Ver entradas de usuario</h3>
+        <button id="cargarsearch" class="cargar">Cargar</button>  
+        <select  id="searchselect" class="select"></select> 
+        <button id="ocultarsearch" class="ocultarentradas">Ocultar</button>
+        <div id="verentradas"></div>
+    </div>
+    <div class="registrar">
+        <form>
+            <h3>Registrar entrada a un usuario</h3>
+        <button type="button" id="cargarentrada" class="cargar">Cargar</button> 
+        <select id="usersentrada" class="select"></select>
+        <select id="conciertosentrada" class="select"></select>
+        <button type="button" id="btnentrada" class="btnregistrar">Registrar</button>
+        <button type="reset" class="reset">Reset</button>
+        </form>
+        
+    </div>
+    <script src="/sitio/js/app.js"></script>
+</body>
+</html>

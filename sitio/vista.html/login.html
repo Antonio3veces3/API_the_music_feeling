@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Music Feeling</title>
+    <link rel="stylesheet" href="./styles/styles.css" type="text/css">
+</head>
+<body>
+    <h2><b>The Music Feeling</b></h2>
+    <form action="http://localhost:1338/login/" method="POST" id="login">
+        <p>
+            <label for="user">Usuario: </label>
+            <input type="text" name="usuario" id="user" placeholder="Ingresa usuario" required>
+        </p>
+        <p>
+            <label for="contraseña">Password: </label>
+            <input type="password" name="password" id="contraseña" placeholder="Password" required>
+        </p>
+        <button type="button" id="btnlogin">ENTER</button>
+    </form>
+    <div id="showtoken" style="display: none;"></div>
+
+    <script src="/sitio/js/login.js"></script>
+</body> 
+</html>
